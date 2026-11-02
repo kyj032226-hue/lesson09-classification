@@ -16,8 +16,10 @@ SAVE_FILE = os.path.join(SAVE_DIR, "user_notes.json")
 
 def ensure_directory_exists():
     """저장 폴더가 없으면 생성합니다."""
-    if not os.path.exists(SAVE_DIR):
-        os.makedirs(SAVE_DIR)
+    try:
+        os.makedirs(SAVE_DIR, exist_ok=True)
+    except Exception:
+        pass
 
 def load_user_notes():
     """저장된 사용자 메모(우리말 뜻 및 출처)를 불러옵니다."""
