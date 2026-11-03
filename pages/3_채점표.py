@@ -1,12 +1,12 @@
-port pandas as pd
+import numpy as np
+import pandas as pd
 import streamlit as st
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeClassifier
 
 # ---------------------------------------------------------
-# 1. 페이지 기본 설정import numpy as np
-im
+# 1. 페이지 기본 설정
 # ---------------------------------------------------------
 st.set_page_config(
     page_title="채점표 - 뇌졸중 예측 실습실 🧠",
